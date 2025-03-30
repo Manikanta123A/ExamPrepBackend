@@ -6,6 +6,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -73,4 +74,8 @@ async def get_questions(request: questionRequest):
     except Exception as e:
         return {"success":False,"error": "Invalid JSON format", "message": str(e)}
 
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # Use Render's PORT environment variable
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
