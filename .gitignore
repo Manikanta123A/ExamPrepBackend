@@ -1,0 +1,26 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Ignore environment files
+.env
+*.env
+venv/
+.env.local
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Ignore dependencies (if using a virtual environment)
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Ignore deployment-related files
+.DS_Store
+node_modules/
