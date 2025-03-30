@@ -18,7 +18,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",  # If you're running React locally
-    "https://your-frontend-domain.com"  # If deployed
+    "https://examprepfrontend.onrender.com"  # If deployed
 ]
 
 # Add CORS middleware
